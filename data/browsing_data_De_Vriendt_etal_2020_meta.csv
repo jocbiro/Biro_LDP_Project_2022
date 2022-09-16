@@ -1,0 +1,8 @@
+territory,Wildlife managed territory containing experimental units
+site,site ID
+EX,"Treatment: EX = exclosure, TE = browsed plot"
+time,Number of years after exclosure construction (sampled_year - build_year). 
+sample_year,Year of data sampling
+build_year,Year of site construction (start of experiment)
+unbrowsed_twigs,Quantity of unbrowsed twigs
+browsed_twigs,Quantity of browsed twigs

@@ -1,0 +1,11 @@
+time,Number of years after exclosure construction (sampled_year - build_year). 
+id,Combination of site and EX
+site,Site ID
+x,X coordinates
+y,Y coordinates
+territory,Wildlife managed territory containing experimental units
+EX,"Treatment: EX = exclosure, TE = browsed plot"
+auc_diff,Quantitative estimation of browsing pressure: difference between the area-under-the-curve of the exclosure total twigs (unbrowsed twigs) and the browsed plot total twigs (unbrowsed + browsed twigs)
+class2_auc_diff,Qualitative regroupment of the browsing pressure (based on auc_diff distribution)
+,
+column J to Y,"Cover of the different species. The species full names corresponding the 6 letters codes can be found in the ""latinnames"" document."
