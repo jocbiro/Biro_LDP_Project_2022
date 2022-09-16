@@ -64,7 +64,7 @@ Data Citation: De Vriendt, Laurent; Lavoie, Sébastien; Tremblay, Jean-Pierre; B
 
 <!-- How many observations will be collected or what will determine sample size? No need to justify decision, but be precise about _exactly_ how the number will be determined. -->
 
-> Data has been collected at 15 paired sites (fenced and unfenced).
+> Data was collected at 15 paired sites (fenced and unfenced).
 
 ## Study type
 
