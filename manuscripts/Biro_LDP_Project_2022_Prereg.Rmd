@@ -28,13 +28,13 @@ Data Citation: De Vriendt, Laurent; Lavoie, Sébastien; Tremblay, Jean-Pierre; B
 
 <!-- What's the main question being asked or hypothesis being tested in this study? -->
 
-> How do different levels of browse severity affect understory plant diversity?
->
+How do different levels of browse severity affect understory plant diversity?
+
 > > 1.  Herbaceous plant diversity will be higher with more browse due to reduced sapling competition.
 > >
 > > 2.  Sapling diversity will be lower with more browse due to high browsing mortality of preferred broadleaf forage species.
 > >
-> > 3.  \*\*Note these hypotheses are not supported by literature and were created only for this assignment.
+> >     \*\*Note these hypotheses are not supported by literature and were created only for this assignment.
 
 ## Dependent variable
 
