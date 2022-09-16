@@ -1,0 +1,83 @@
+---
+title           : "LDP Project Preregistration"
+shorttitle      : "My preregistration"
+date            : "`r Sys.setlocale('LC_TIME', 'C'); format(Sys.time(), '%d\\\\. %B %Y')`"
+
+author: 
+  - name        : Jocelyn Biro
+    affiliation : 1
+
+affiliation:
+  - id          : 1
+    institution : Wilfrid Laurier University
+
+output: prereg::prereg_pdf
+---
+
+<!-- To keep pre-registrations to a reasonable length for readers, we recommend answers fit within a single page .pdf document, roughly 3200 characters. Read more about this here: https://aspredicted.org/messages/why_limits.php -->
+
+## Data collection
+
+<!-- Have any data been collected for this study already? (Note: "Yes" is not an accepted answer.) -->
+
+**Yes**, data has already been collected and is accessible from Dryad Digital Repository (<https://datadryad.org/stash/dataset/doi:10.5061%2Fdryad.3xsj3txdp>).
+
+Data Citation: De Vriendt, Laurent; Lavoie, Sébastien; Tremblay, Jean-Pierre; Brousseau, Maxime (2020), Effects of different moose browsing pressures on the succession of plant communities within the herbaceous and saplings layers of a boreal forest, Dryad, Dataset, <https://doi.org/10.5061/dryad.3xsj3txdp>
+
+## Hypothesis
+
+<!-- What's the main question being asked or hypothesis being tested in this study? -->
+
+> How do different levels of browse severity affect understory plant diversity?
+>
+> > 1.  Herbaceous plant diversity will be higher with more browse due to reduced sapling competition.
+> >
+> > 2.  Sapling diversity will be lower with more browse due to high browsing mortality of preferred broadleaf forage species.
+> >
+> > 3.  \*\*Note these hypotheses are not supported by literature and were created only for this assignment.
+
+## Dependent variable
+
+<!-- Describe the key dependent variable(s) specifying how they will be measured. -->
+
+> Number of herbaceous plant species and sapling species (understory plant diversity).
+
+## Conditions
+
+<!-- How many and which conditions will participants be assigned to? -->
+
+> Understory plant communities will be exposed to different levels of browse severity, defined at the proportion of twigs browsed versus unbrowsed.
+
+## Analyses
+
+<!-- Specify exactly which analyses you will conduct to examine the main question/hypothesis. -->
+
+> I will calculate browse severity by dividing the number of browsed twigs by the total number of twigs. I will use a scatterplot to investigate the total number of herbaceous plant species in each plot (response variable) by the browse severity value of that plot (predictor variable). I will repeat this for the sapling species data.
+
+## Outliers and exclusions
+
+<!-- Describe exactly how outliers will be defined and handled, and your precise rule(s) for excluding observations. -->
+
+> I will not be identifying or excluding outliers.
+
+## Sample size
+
+<!-- How many observations will be collected or what will determine sample size? No need to justify decision, but be precise about _exactly_ how the number will be determined. -->
+
+> Data has been collected at 15 paired sites (fenced and unfenced).
+
+## Study type
+
+-   Experiment
+
+# References
+
+## 
+
+```{=tex}
+\vspace{-2pc}
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{-1in}
+\setlength{\parskip}{8pt}
+```
+\noindent
