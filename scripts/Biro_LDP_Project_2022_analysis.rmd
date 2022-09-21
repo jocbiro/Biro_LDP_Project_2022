@@ -1,0 +1,58 @@
+---
+title: "Analysis"
+author: "Jocelyn Biro"
+date: "2022-09-20"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(ggplot2)
+library(dplyr)
+```
+
+Import data
+```{r}
+setwd("C:/Users/JocBi/OneDrive - Wilfrid Laurier University/Documents/CIEE-REPRO-PRO-2022/Biro_LDP_Project_2022/")
+
+herb.meta <- read.csv('data/raw/herbslayer_data_De_Vriendt_etal_2020_meta.csv')
+herb <- read.csv('data/raw/herbslayer_data_De_Vriendt_etal_2020.csv')
+
+browse.meta <- read.csv('data/raw/browsing_data_De_Vriendt_etal_2020_meta.csv')
+browse <- read.csv('data/raw/browsing_data_De_Vriendt_etal_2020.csv')
+
+sapling.meta <- read.csv('data/raw/saplingslayer_data_De_Vriendt_etal_2020_meta.csv')
+sapling <- read.csv('data/raw/saplingslayer_data_De_Vriendt_etal_2020.csv')
+
+```
+
+Calculate browse severity (proportion browsed) and total percent covers for herbs and saplings 
+```{r}
+#Create column for proportion browsed
+browse$prop.browse <- browse$browsed_twigs/browse$unbrowsed_twigs
+
+#Total herb cover
+herb$total.herb <- rowSums(herb[,c(10:71)])
+
+#Total sapling number
+sapling$total.sapling <- rowSums(sapling[,c(10:25)])
+
+#Join tables to create one, select total herb cover, sapling cover and browse severity columns and remove rows with NAs
+understory.browse <- left_join(browse,herb, by=c("time"="time", "site"="site", "EX"="EX")) %>% left_join(.,sapling,by=c("time"="time", "site"="site", "EX"="EX")) %>%  select(prop.browse, total.herb, total.sapling) %>% na.omit(.)
+
+
+#write this as new csv files into "clean" data folder
+write.csv(understory.browse,"C:/Users/JocBi/OneDrive - Wilfrid Laurier University/Documents/CIEE-REPRO-PRO-2022/Biro_LDP_Project_2022/data/clean//understory_browse.csv",row.names = FALSE)
+
+```
+Create scatterplots
+```{r}
+#Number of saplings x proportion of browse
+ggplot(understory.browse, aes(x=total.sapling, y=prop.browse)) + geom_point()+labs(title="Number of Saplings according to Proportion of Browse", x="Total Saplings (#)", y="Proportion of Browse")
+
+#Herb percent cover x proportion of browse
+ggplot(understory.browse, aes(x=total.herb, y=prop.browse)) + geom_point()+labs(title="Herb Percent Cover according to Proportion of Browse", x="Total Herb Cover (%)", y="Proportion of Browse")
+```
+ 
+ 

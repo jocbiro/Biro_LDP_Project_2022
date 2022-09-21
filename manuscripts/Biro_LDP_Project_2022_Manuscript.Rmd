@@ -1,0 +1,94 @@
+---
+title: "LDP Project Manuscript"
+author: "Jocelyn Biro"
+date: "2022-09-16"
+title: How does browse severity influence understory plants?
+author:
+  - name: Jocelyn Biro
+    email: biro6470@mylaurier.ca
+    affiliation: Wilfrid Laurier University
+    correspondingauthor: true
+    footnote: 1
+  - name: Rod Kimble
+    email: hotrod@fifteenbuses.com
+    affiliation: Centre of Stunting for Frank's Surgery
+address:
+  - code: Some Institute of Technology
+    address: Department, Street, City, State, Zip
+  - code: Another University
+    address: Department, Street, City, State, Zip
+abstract: |
+  We looked at the understory plant cover under different levels of browse.
+keywords: 
+  - browse
+  - moose
+journal: "Moos-ecology"
+date: "`r Sys.Date()`"
+classoption: preprint, 3p, authoryear
+bibliography: Biro_LDP_Project_References.bib
+linenumbers: true
+numbersections: true
+csl: council-of-science-editors-author-date.csl
+output: 
+  rticles::elsevier_article:
+    keep_tex: true
+    citation_package: natbib
+header-includes:
+ \usepackage{float}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+# **How does browse severity influence understory plants?**
+
+Jocelyn Biro^1^ , Rod Kimble^2^\*
+
+1.  Department of Biology
+2.  Centre of Stunting for Frank's Surgery
+
+\newpage
+
+# Abstract
+
+We looked at understory plant covers under different levels of browse.
+
+# Introduction
+
+Different levels of moose browsing pressure can change plant community compositions [@devriendtDelayedSuccessionAlternative2021].
+
+# Methods
+
+I calculated browse pressure (severity) by dividing the number of browsed twigs by the total number of twigs (proportion browsed). I used a scatterplot to investigate the total herbaceous plant cover in each plot (response variable) by the browse severity value of that plot (predictor variable). I repeated this for the sapling data (in number of saplings per site).
+
+# Results
+
+```{r, include=FALSE}
+library(ggplot2)
+
+#Read in cleaned csv file
+understory.browse <- read.csv('C:/Users/JocBi/OneDrive - Wilfrid Laurier University/Documents/CIEE-REPRO-PRO-2022/Biro_LDP_Project_2022/data/clean/understory_browse.csv')
+
+#Create scatterplots
+#Number of saplings x proportion of browse
+p.sap <- ggplot(understory.browse, aes(x=total.sapling, y=prop.browse)) + geom_point()+labs(x="Total Saplings (#)", y="Proportion of Browse")
+
+#Herb percent cover x proportion of browse
+p.herb <- ggplot(understory.browse, aes(x=total.herb, y=prop.browse)) + geom_point()+labs(x="Total Herb Cover (%)", y="Proportion of Browse")
+```
+
+```{r fig1, fig.width = 5, fig.height = 3, fig.align='center', out.width="75%", fig.cap = "\\label{fig1}Number of saplings at different browse pressures", echo = FALSE}
+p.sap
+```
+
+```{r fig1, fig.width = 5, fig.height = 3, fig.align='center', out.width="75%", fig.cap = "\\label{fig1}Herb percent covers at different browse pressures", echo = FALSE}
+p.herb
+```
+
+# Discussion
+
+Yes, browsing pressure has an effect on understory plants [@devriendtDelayedSuccessionAlternative2021, @lorentzenkolstadPervasiveMooseBrowsing2018].
+
+# References
